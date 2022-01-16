@@ -1,1 +1,1 @@
-web: java -jar build/libs/tamago.jar
+worker: java -jar build/libs/tamago.jar
