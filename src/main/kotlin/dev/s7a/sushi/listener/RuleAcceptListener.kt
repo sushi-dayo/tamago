@@ -2,6 +2,7 @@ package dev.s7a.sushi.listener
 
 import dev.s7a.sushi.Config
 import dev.s7a.sushi.bot
+import dev.s7a.sushi.logger
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent
 import net.dv8tion.jda.api.events.message.react.MessageReactionRemoveEvent
 import net.dv8tion.jda.api.hooks.ListenerAdapter
@@ -17,13 +18,17 @@ object RuleAcceptListener : ListenerAdapter() {
 
     override fun onMessageReactionAdd(event: MessageReactionAddEvent) {
         if (event.messageId == ruleMessageId) {
-            memberRole.guild.addRoleToMember(event.userId, memberRole).queue()
+            val userId = event.userId
+            memberRole.guild.addRoleToMember(userId, memberRole).queue()
+            logger.debug("Add Member Role: $userId")
         }
     }
 
     override fun onMessageReactionRemove(event: MessageReactionRemoveEvent) {
         if (event.messageId == ruleMessageId) {
-            memberRole.guild.removeRoleFromMember(event.userId, memberRole).queue()
+            val userId = event.userId
+            memberRole.guild.removeRoleFromMember(userId, memberRole).queue()
+            logger.debug("Remove Member Role: $userId")
         }
     }
 }
