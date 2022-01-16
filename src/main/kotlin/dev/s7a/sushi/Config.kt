@@ -7,6 +7,15 @@ import dev.s7a.sushi.properties.PropertiesFile
  */
 object Config : PropertiesFile("config.properties") {
     /**
+     * 表示する
+     */
+    fun printAll() {
+        logger.debug("BotToken: ${if (botToken != null) "*****" else ""}")
+        logger.debug("RuleMessageId: $ruleMessageId")
+        logger.debug("MemberRoleId: $memberRoleId")
+    }
+
+    /**
      * Discord Bot のトークン
      */
     val botToken by string("BotToken")

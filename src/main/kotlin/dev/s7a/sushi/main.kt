@@ -20,6 +20,7 @@ lateinit var bot: JDA
 val logger: Logger = LoggerFactory.getLogger("Tamago")
 
 fun main() {
+    Config.printAll()
     bot = JDABuilder.createLight(Config.botToken).apply {
         addEventListeners(RuleAcceptListener)
     }.build()
