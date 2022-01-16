@@ -29,6 +29,10 @@ tasks.named("build") {
     dependsOn("shadowJar")
 }
 
+task("stage") { // For Heroku
+    dependsOn("build")
+}
+
 tasks.withType<ShadowJar> {
     configurations = listOf(shadowImplementation)
     archiveClassifier.set("")
