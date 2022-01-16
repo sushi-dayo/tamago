@@ -15,7 +15,7 @@ val shadowImplementation: Configuration by configurations.creating
 configurations["implementation"].extendsFrom(shadowImplementation)
 
 dependencies {
-    implementation(kotlin("stdlib"))
+    shadowImplementation(kotlin("stdlib"))
 }
 
 application {
