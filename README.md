@@ -1,0 +1,3 @@
+# たまごちゃん
+
+Discord Bot
