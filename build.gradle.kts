@@ -16,6 +16,7 @@ configurations["implementation"].extendsFrom(shadowImplementation)
 
 dependencies {
     shadowImplementation(kotlin("stdlib"))
+    shadowImplementation("net.dv8tion:JDA:5.0.0-alpha.4")
 }
 
 application {

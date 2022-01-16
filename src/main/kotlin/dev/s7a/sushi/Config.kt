@@ -5,4 +5,9 @@ import dev.s7a.sushi.properties.PropertiesFile
 /**
  * コンフィグ
  */
-object Config : PropertiesFile("config.properties")
+object Config : PropertiesFile("config.properties") {
+    /**
+     * Discord Bot のトークン
+     */
+    val botToken by string("BotToken")
+}
