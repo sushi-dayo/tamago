@@ -11,6 +11,9 @@ Discord Bot
 
 ### config.properties
 
+- `Tamago` というプリフィックスをつけたシステム環境変数でも設定可能です(例: `BotToken` → `TamagoBotToken`)
+- ファイルに設定された値を優先します
+
 ```properties
 # Discord Bot Token
 # https://discord.com/developers/applications
