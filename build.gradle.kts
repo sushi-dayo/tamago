@@ -17,6 +17,7 @@ configurations["implementation"].extendsFrom(shadowImplementation)
 dependencies {
     shadowImplementation(kotlin("stdlib"))
     shadowImplementation("net.dv8tion:JDA:5.0.0-alpha.4")
+    shadowImplementation("ch.qos.logback:logback-classic:1.2.10")
 }
 
 application {
