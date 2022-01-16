@@ -11,7 +11,7 @@ import kotlin.reflect.KProperty
  */
 class PropertiesValue(private val properties: Properties, private val key: String) : ReadWriteProperty<Any?, String?> {
     override fun getValue(thisRef: Any?, property: KProperty<*>): String? {
-        return properties.getProperty(key).ifBlank { null } ?: System.getProperty("Tamago$key")
+        return properties.getProperty(key).ifBlank { null } ?: System.getenv("Tamago$key")
     }
 
     override fun setValue(thisRef: Any?, property: KProperty<*>, value: String?) {
