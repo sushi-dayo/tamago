@@ -1,14 +1,12 @@
-<h1 align="center">
-  <img alt="icon" src="icon.png" />
-  たまごちゃん
-</h1>
+<div align="center">
+  <img alt="icon" src="icon.png" width="200" />
+  <h1>たまごちゃん</h1>
 
 [![Kotlin](https://img.shields.io/badge/kotlin-1.7.10-blue.svg?logo=kotlin)](http://kotlinlang.org)
 [![ktlint](https://img.shields.io/badge/code%20style-%E2%9D%A4-FF4081.svg)](https://ktlint.github.io/)
 [![GitHub Releases](https://img.shields.io/github/v/release/sushi-dayo/tamago)](https://github.com/sushi-dayo/tamago/releases)
 [![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](http://www.apache.org/licenses/LICENSE-2.0)
-
-Discord Bot
+</div>
 
 ## 機能
 
